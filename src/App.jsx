@@ -1,0 +1,27 @@
+import s from './style.module.css';
+
+export function App() {
+  return (
+    <div className={s.container}>
+      <div className={` row ${s.header}`}>
+        <div className={"col-3"}>
+          Logo
+        </div>
+        <div className={`col-9 ${s.income_input}`}>
+          Income input
+        </div>
+      </div> 
+      <div className={`row ${s.workspace}`}>
+        <div className={`col-12 ${s.expense_input}`}>
+          Expense Input
+        </div>
+        <div className={`col-12 col-md-6 col-lg-4 ${s.expense_list}`}>
+          Expense History
+          <div className={`col-12 ${s.expense_total}`}>
+            Expense Total
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
