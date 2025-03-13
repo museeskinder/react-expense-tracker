@@ -4,11 +4,11 @@ export function App() {
   return (
     <div className={s.container}>
       <div className={` row ${s.header}`}>
-        <div className={"col-3"}>
           Logo
+        <div className={"col-3"}>
         </div>
         <div className={`col-9 ${s.income_input}`}>
-          Income input
+          Income Input
         </div>
       </div> 
       <div className={`row ${s.workspace}`}>
