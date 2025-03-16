@@ -1,5 +1,6 @@
 import s from './style.module.css'
-import { ExpenseInput } from './assets/components/ExpenseInput/ExpenseInput';
+import { ExpenseInput } from './assets/containers/ExpenseInput/ExpenseInput';
+import { ExpenseList } from './assets/containers/ExpenseList/ExpenseList';
 
 export function App() {
   return (
@@ -17,7 +18,7 @@ export function App() {
           <ExpenseInput />
         </div>
         <div className={`col-12 col-md-6 col-lg-4 ${s.expense_list}`}>
-          Expense History
+          <ExpenseList />
           <div className={`col-12 ${s.expense_total}`}>
             Expense Total
           </div>

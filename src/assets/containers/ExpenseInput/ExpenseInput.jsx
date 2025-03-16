@@ -7,10 +7,12 @@ export function ExpenseInput(props) {
   const dispatch = useDispatch();
   const [price, setPrice] = useState();
   const [name, setName] = useState();
+  let [id, setId] = useState(0)
 
   const submit = (e) => {
+    setId(id += 1);
     e.preventDefault();
-    dispatch(addExpense({name: name, price: price}));
+    dispatch(addExpense({id: id, name: name, price: price}));
   };
 
   return (
@@ -37,7 +39,7 @@ export function ExpenseInput(props) {
         </div>
 
         <div className="col-12 col-sm-2 col-md-4 col-lg-4 mb-2">
-          <button type="submit" className={`btn btn-primary ${s.btn}`}>
+          <button  type="submit" className={`btn btn-primary ${s.btn}`}>
             Add
           </button>
         </div>
