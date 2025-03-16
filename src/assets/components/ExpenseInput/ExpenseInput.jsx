@@ -1,13 +1,16 @@
+import { useState } from "react";
 import { addExpense } from "../../../store/expense/expense-slice";
 import s from "./style.module.css";
 import { useDispatch } from "react-redux";
 
 export function ExpenseInput(props) {
   const dispatch = useDispatch();
+  const [price, setPrice] = useState();
+  const [name, setName] = useState();
 
   const submit = (e) => {
     e.preventDefault();
-    dispatch(addExpense());
+    dispatch(addExpense({name: name, price: price}));
   };
 
   return (
@@ -19,6 +22,7 @@ export function ExpenseInput(props) {
             className="form-control"
             placeholder='Ex : "Apple"'
             name="name"
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="col-12 col-sm-2 col-md-4 col-lg-4 mb-2">
@@ -28,6 +32,7 @@ export function ExpenseInput(props) {
             className="form-control"
             placeholder="Ex: 3.99"
             name="price"
+            onChange={(e) => setPrice(e.target.value)}
           />
         </div>
 
