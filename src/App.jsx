@@ -1,6 +1,7 @@
 import s from './style.module.css'
 import { ExpenseInput } from './assets/containers/ExpenseInput/ExpenseInput';
 import { ExpenseList } from './assets/containers/ExpenseList/ExpenseList';
+import { IncomeInput } from './assets/containers/IncomeInput/IncomeInput';
 
 export function App() {
   return (
@@ -10,7 +11,7 @@ export function App() {
         <div className={"col-3"}>
         </div>
         <div className={`col-9 ${s.income_input}`}>
-          Income Input
+          <IncomeInput />
         </div>
       </div> 
       <div className={`row ${s.workspace}`}>
